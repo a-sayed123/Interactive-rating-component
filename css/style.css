@@ -1,0 +1,175 @@
+:root {
+  /* colors */
+  --Orange-500: hsl(25, 97%, 53%);
+  --White: hsl(0, 100%, 100%);
+  --Grey-500: hsl(217, 12%, 63%);
+  --Grey-900: hsl(213, 19%, 18%);
+  --Grey-950: hsl(216, 12%, 8%);
+  /* FontSize */
+  --fontSize-paragraph: 15px;
+  --fontSize-headline-1: calc(2rem + 2.5vw);
+  --fontSize-title-1: calc(1.6rem + 1.2vw);
+  /* FontWeight */
+  --Weight-paragraph: 400;
+  --Weight-title: 700;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a,
+img,
+data,
+span,
+input,
+button,
+select,
+ion-icon,
+textarea {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  color: auto;
+}
+
+input,
+button,
+select,
+textarea {
+  background: none;
+  border: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+.headline-1 {
+  font-size: var(--fontSize-headline-1);
+}
+
+.title-1 {
+  font-size: var(--fontSize-title-1);
+}
+
+body {
+  background-color: rgb(20,21,25);
+  color: var(--white);
+  font-family: "overpass", sans-serif;
+  font-size: var(--fontSize-title-1);
+  font-weight: var(--Weight-paragraph);
+  line-height: 0.5rem;
+  overflow: auto;
+}
+
+.card {
+  position: relative;
+  width: 35rem;
+  height: 33rem;
+  left: 50%;
+  top: 27vh;
+  padding-inline-start: 2.5rem;
+  padding-block-start: 2.5rem;
+  border-radius: 3rem;
+  background-color: rgb(32,39,46);
+  transform: translateX(-50%);
+  overflow: hidden;
+}
+
+.card-form {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-icon {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  top: 10px;
+  padding: 1.1rem;
+  z-index: 2;
+  border-radius: 50%;
+  background-color: rgb(39,46,56);
+}
+
+.card-title {
+  position: relative;
+  font-size: 2.3rem;
+  top: 50px;
+  color: white;
+  font-family: "overpass", sans-serif;
+}
+
+.card-text {
+  position: relative;
+  color: var(--Grey-500);
+  font-size: 1.2rem;
+  padding-block: 1rem;
+  top: 6rem;
+  font-family: "overpass", sans-serif;
+  width: 27rem;
+  overflow: hidden;
+  line-height: 1.6;
+}
+
+.card-options {
+  position: relative;
+  top: 7.5rem;
+  display: flex;
+  padding-inline-end: 2.5rem;
+  gap: 2rem;
+  height: 40px;
+  width: 100%;
+  justify-content: center;
+}
+
+.card-options .card-btn {
+  background-color: rgb(38,47,56);
+  width: 90%;
+  border-radius: 50%;
+  height: 100%;
+  color: rgb(156,164,174);
+}
+.submit{
+  position: relative;
+  top: 7rem;
+  background-color: var(--Orange-500);
+  margin-block-start: 2rem;
+  width: 30rem;
+  border-radius: 4rem;
+  height: 4rem;
+  font-weight: bold;
+  font-family: "overpass",sans-serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
