@@ -159,6 +159,13 @@ body {
   height: 100%;
   color: rgb(156,164,174);
 }
+
+.card-options .card-btn:hover{
+  background-color: var(--Orange-500);
+  color:  #252d30;
+  transition: 250ms ease;
+}
+
 .submit{
   position: relative;
   top: 7rem;
@@ -173,3 +180,10 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.1rem;
 }
+
+.submit:hover{
+  background-color: white;
+  color:  #252d30;
+  transition: 250ms ease;
+}
+
