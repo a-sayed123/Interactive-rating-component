@@ -36,6 +36,30 @@ ratingBtns.forEach(btn => {
   })
 })
 
+const container = document.querySelector('[role="radiogroup"]');
+
+container.addEventListener('keydown', e => {
+  const radios = Array.from(container.querySelectorAll('[role="radio"]'));
+  let index = radios.findIndex(r => r.getAttribute('aria-checked') === 'true');
+
+  if(e.key === "ArrowRight" || e.key === "ArrowDown") {
+    index = (index + 1) % radios.length;
+    radios.forEach(r => r.setAttribute('aria-checked', 'false'));
+    radios[index].setAttribute('aria-checked', 'true');
+    radios[index].focus();
+    selectedRating = Number(radios[index].textContent);
+    e.preventDefault();
+  }
+
+  if(e.key === "ArrowLeft" || e.key === "ArrowUp") {
+    index = (index - 1 + radios.length) % radios.length;
+    radios.forEach(r => r.setAttribute('aria-checked', 'false'));
+    radios[index].setAttribute('aria-checked', 'true');
+    radios[index].focus();
+    selectedRating = Number(radios[index].textContent);
+    e.preventDefault();
+  }
+});
 
 
 submitBtn.addEventListener('click', () => {
