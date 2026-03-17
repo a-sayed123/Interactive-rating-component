@@ -27,7 +27,7 @@ let selectedRating = 0
 ratingBtns.forEach(btn => {
   btn.addEventListener('click', () => {
     // إزالة aria-checked من كل الأزرار
-    ratingBtns.forEach(b => {b.setAttribute('aria-checked', 'false') , b.classList.remove('active')})
+    ratingBtns.forEach(b => { b.setAttribute('aria-checked', 'false'), b.classList.remove('active') })
     // تعيين الزر المختار
     btn.setAttribute('aria-checked', 'true')
     btn.classList.add('active')
@@ -42,7 +42,7 @@ container.addEventListener('keydown', e => {
   const radios = Array.from(container.querySelectorAll('[role="radio"]'));
   let index = radios.findIndex(r => r.getAttribute('aria-checked') === 'true');
 
-  if(e.key === "ArrowRight" || e.key === "ArrowDown") {
+  if (e.key === "ArrowRight" || e.key === "ArrowDown") {
     index = (index + 1) % radios.length;
     radios.forEach(r => r.setAttribute('aria-checked', 'false'));
     radios[index].setAttribute('aria-checked', 'true');
@@ -51,7 +51,7 @@ container.addEventListener('keydown', e => {
     e.preventDefault();
   }
 
-  if(e.key === "ArrowLeft" || e.key === "ArrowUp") {
+  if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
     index = (index - 1 + radios.length) % radios.length;
     radios.forEach(r => r.setAttribute('aria-checked', 'false'));
     radios[index].setAttribute('aria-checked', 'true');
@@ -63,11 +63,11 @@ container.addEventListener('keydown', e => {
 
 
 submitBtn.addEventListener('click', () => {
-  if (selectedRating === 0)  return alert('Please select a rating!') 
+  if (selectedRating === 0) return alert('Please select a rating!')
 
-    ratingCard.classList.add('hidden')
-    thankYouCard.classList.remove('hidden')
-    selectedRatingText.textContent = `You selected ${selectedRating} out of 5`
+  ratingCard.classList.add('hidden')
+  thankYouCard.classList.remove('hidden')
+  selectedRatingText.textContent = `You selected ${selectedRating} out of 5`
 
 })
 
