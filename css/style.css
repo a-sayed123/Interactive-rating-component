@@ -5,10 +5,12 @@
   --Grey-500: hsl(217, 12%, 63%);
   --Grey-900: hsl(213, 19%, 18%);
   --Grey-950: hsl(216, 12%, 8%);
+  
   /* FontSize */
   --fontSize-paragraph: 15px;
   --fontSize-headline-1: calc(2rem + 2.5vw);
   --fontSize-title-1: calc(1.6rem + 1.2vw);
+  
   /* FontWeight */
   --Weight-paragraph: 400;
   --Weight-title: 700;
@@ -24,9 +26,7 @@
   box-sizing: border-box;
 }
 
-li {
-  list-style: none;
-}
+li {  list-style: none; }
 
 a,
 img,
@@ -35,18 +35,14 @@ span,
 input,
 button,
 select,
-textarea {
-  display: block;
-}
+textarea { display: block; }
 
 a {
   text-decoration: none;
   color: inherit;
 }
 
-img {
-  color: auto;
-}
+img { color: auto; }
 
 input,
 button,
@@ -57,9 +53,7 @@ textarea {
   color: inherit;
 }
 
-button {
-  cursor: pointer;
-}
+button { cursor: pointer; }
 
 html {
   font-size: 62.5%;
@@ -85,6 +79,7 @@ body {
   line-height: 0.5rem;
   overflow: auto;
 }
+
 /* Card Style */
 .card {
   position: relative;
