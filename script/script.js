@@ -1,5 +1,3 @@
-'use strict'
-
 const ratingBtns = document.querySelectorAll("[data-rating-btn]")
 
 const submitBtn = document.querySelector("[data-submit-btn]")
