@@ -11,7 +11,7 @@
 
 // let selectedRating = 0
 
-const ratingBtns = document.querySelectorAll("[data-rating-btn]")
+const ratingBtns = document.querySelectorAll('[role="radio"]')
 
 const submitBtn = document.querySelector("[data-submit-btn]")
 
@@ -26,11 +26,13 @@ let selectedRating = 0
 
 ratingBtns.forEach(btn => {
   btn.addEventListener('click', () => {
-    selectedRating = Number(btn.textContent)
-    console.log(selectedRating)
-    // لإظهار الاختيار بصريًا
-    ratingBtns.forEach(b => b.classList.remove('active'))
+    // إزالة aria-checked من كل الأزرار
+    ratingBtns.forEach(b => {b.setAttribute('aria-checked', 'false') , b.classList.remove('active')})
+    // تعيين الزر المختار
+    btn.setAttribute('aria-checked', 'true')
     btn.classList.add('active')
+    // هنا ممكن تخزن القيمة لاستخدامها في submit
+    selectedRating = Number(btn.textContent)
   })
 })
 
